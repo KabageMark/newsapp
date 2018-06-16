@@ -21,7 +21,33 @@ def get_news(category):
 
         if get_news_response['results']:
             news_results_list = get_news_response['results']
-            news_results = process_results(news_results_list)
+            news_results = process_news(news_results_list)
 
+
+    return news_results
+
+    def process_news(news_list):
+      '''
+       Function  that processes the news result and transform them to a list of Objects
+
+         Args:
+        news_list: A list of dictionaries that contain movie details
+
+         Returns :
+        news_results: A list of news objects
+       '''
+    news_results = []
+    for news_item in news_results:
+        id = news_item.get('id')
+        title = news_item.get('title')
+        source = news_item.get('source')
+        image = news_item.get('image')
+        Url = news_item.get('Url')
+        description = news_item.get('description')
+        publishedAt = news_item.get('publishedAt')
+
+        if source:
+            news_object = News(id,title,source,image,description,publishedAt,Url)
+            news_results.append(news_object)
 
     return news_results
