@@ -1,5 +1,7 @@
 {% macro displaySources(source_list)%}
     {% for source in source_list %}
+    <ul>
         {{source.name}}
+    </ul>
     {% endfor %}
 {% endmacro %}
