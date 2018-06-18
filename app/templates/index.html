@@ -1,10 +1,18 @@
 <body>
+{% import 'macros.html' as macro%}
+{% block content %}
+    <h1>sports</h1>
+    <ul>
+        <li>
+            {{macro.displaySources(sports)}}  
+        </li>
+    </ul>
+    
 
-    <h1>news</h1>    
-    {% for title_news in title%}
-            {{ title_news.title}}
-        {% endfor %}
+    <!-- {% for news in source_results %}
+        {{ news.name}}
+    {% endfor %} -->
 
 
-
+{% endblock%}
 </body>
