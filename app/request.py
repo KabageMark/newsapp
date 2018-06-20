@@ -2,10 +2,11 @@ from app import app
 import urllib.request,json
 from .models import news
 News = news.NEWS
+Articles= news.ARTICLES
 
 # Getting api key
 api_key = app.config['NEWS_API_KEY']
-api_key2 = app.config['ARTICLES_API_KEY']
+api_key2 = app.config['NEWS_API_KEY']
 base_url = app.config["SOURCE_API_BASE_URL"]
 base_url2 = app.config['ARTICLE_API_BASE_URL']
 
@@ -64,11 +65,11 @@ def get_articles(category):
 
         if get_articles_response['articles']:
             articles_results_list = get_articles_response['articles']
-            articles_results = process_source(articles_results_list)
+            articles_results = process_articles(articles_results_list)
     return articles_results
 
 
-    def process_articles(articles_list):
+def process_articles(articles_list):
         '''
         Function  that processes the news result and transform them to a list of Objects
 
@@ -86,8 +87,8 @@ def get_articles(category):
             url = article_item.get('url')
             urlToImage = article_item.get('urlToImage')
 
-            article_object = News(id,author,urlToImage,description,url)
+            article_object = Articles(id,author,urlToImage,description,url)
             articles_results.append(article_object)
-        # print(source_results)
+
         return articles_results
 
