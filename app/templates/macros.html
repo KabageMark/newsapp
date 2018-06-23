@@ -1,7 +1,10 @@
-{% macro displaySources(source_list)%}
-    {% for sources in source_list %}
+{% macro displayArticles(articles_list)%}
+    {% for news in articles_list %}
     <ul>
-        {{sources.name}}
+        {{news.title}}
+        {{news.author}}
+        {{news.description}}
+        <img src="{{news.urlToImage}}" alt="image">
         
     </ul>
     {% endfor %}

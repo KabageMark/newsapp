@@ -1,7 +1,12 @@
 {% import 'macros.html' as macro%}
 {% block content %}
-    <h1>sports</h1>
+    <h1>YOUR DAILY NEWS ARTICLES</h1>
     <ul>  
-        {{macro.displaySources(general)}}
+        {{macro.displayArticles(general)}}
+        {{macro.displayArticles(author)}}
+        {{macro.displayArticles(description)}}
+        {{macro.displayArticles(urlToImage)}}
+        
+    
     </ul>
 {% endblock%}
