@@ -1,12 +1,45 @@
 {% extends 'bootstrap/base.html'%}
 {% import 'macros.html' as macro%}
 {% block content %}
-    <div class= "jumbtron">
-        <div class = "container">
-    <h1>NEWS</h1>
+
+<div class = "jumbotron">
+    <center><h1>news</h1></center>
     </div>
-    </div>
-    <ul>  
+
+    <div class= "row">
+    <div class = "container">
+
+
+    
+    <div class="col-md-3">
+    <h3>general</h3>
+    <ul>
         {{macro.displaySources(general)}}
-</ul>
+     </ul>
+</div>
+
+
+<div class="col-md-3">
+        <h3>technology</h3>
+    <ul>
+        {{macro.displaySources(technology)}}
+    </ul>
+</div>
+
+
+<div class="col-md-3">
+        <h3>sports</h3>
+        <ul>
+            {{macro.displaySources(sports)}}
+        </ul>
+    </div>
+
+    
+    <div class="col-md-3">
+            <h3>business</h3>
+            <ul>
+                {{macro.displaySources(business)}}
+            </ul>
+        </div>
+</div>             
 {% endblock%}

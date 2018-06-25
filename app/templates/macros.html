@@ -1,10 +1,20 @@
 {% macro displaySources(sources_list)%}
     {% for source in sources_list %}
     <ul>
-        <a href="{{source.url}}">{{source.name}}</a>
+        <a href=/sources/articles/"{{source.id}}">{{source.name}}</a>
         {{source.description}}
         
     </ul>
     {% endfor %}
 {% endmacro %}
+
+{% macro displayArticles(articles_list)%}
+    {% for article in articles_list %}
+    {{article.author}}
+    {{article.description}}
+    <img src="{{article.urlToImage}}">
+
+    {% endfor %}
+{% endmacro %}
+
 
