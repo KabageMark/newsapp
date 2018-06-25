@@ -1,12 +1,12 @@
+{% extends 'bootstrap/base.html'%}
 {% import 'macros.html' as macro%}
 {% block content %}
-    <h1>YOUR DAILY NEWS ARTICLES</h1>
+    <div class= "jumbtron">
+        <div class = "container">
+    <h1>NEWS</h1>
+    </div>
+    </div>
     <ul>  
-        {{macro.displayArticles(general)}}
-        {{macro.displayArticles(author)}}
-        {{macro.displayArticles(description)}}
-        {{macro.displayArticles(urlToImage)}}
-        
-    
-    </ul>
+        {{macro.displaySources(general)}}
+</ul>
 {% endblock%}

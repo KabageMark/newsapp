@@ -55,7 +55,7 @@ def get_articles(category):
     '''
     Function that gets the json response to our url request
     '''
-    get_articles_url = base_url2.format( category, api_key)
+    get_articles_url = base_url2.format( category, api_key2)
     print(get_articles_url)
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
