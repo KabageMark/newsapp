@@ -10,9 +10,12 @@
 
 {% macro displayArticles(articles_list)%}
     {% for article in articles_list %}
-    {{article.author}}
-    {{article.description}}
+    <h1>{{article.author}}</h1>
+    <br>
+    <p>{{article.description}}</p>
+    <div class="container">
     <img src="{{article.urlToImage}}">
+    </div>
 
     {% endfor %}
 {% endmacro %}
