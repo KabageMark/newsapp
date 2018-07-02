@@ -55,7 +55,7 @@ def get_articles(id):
     '''
     Function that gets the json response to our url request
     '''
-    get_articles_url = base_url2.format( id, api_key2)+"&id="+id
+    get_articles_url = base_url2.format( id, api_key2)
     print(get_articles_url)
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
@@ -86,8 +86,9 @@ def process_articles(articles_list):
             description = article_item.get('description')
             url = article_item.get('url')
             urlToImage = article_item.get('urlToImage')
+            publsihedAt = article_item.get('publishedAt')
 
-            article_object = Articles(id,author,urlToImage,description,url)
+            article_object = Articles(id,author,urlToImage,description,url,publsihedAt)
             articles_results.append(article_object)
 
         return articles_results

@@ -9,13 +9,17 @@
 {% endmacro %}
 
 {% macro displayArticles(articles_list)%}
+<center><h1>Top Headlines</h1></center>
     {% for article in articles_list %}
-    <h1>{{article.author}}</h1>
+    
+    <h2>{{article.author}}</h2>
     <br>
-    <p>{{article.description}}</p>
+    <a href=/sources/articles/fullarticle/"{{article.description}}">click to read full article</a>
     <div class="container">
     <img src="{{article.urlToImage}}">
     </div>
+    <small><strong>publishedat</strong></span>{{article.publishedAt}}</small> <small><strong>published by</strong></span>{{article.author}}</small>
+    
 
     {% endfor %}
 {% endmacro %}
