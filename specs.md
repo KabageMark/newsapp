@@ -7,7 +7,7 @@
 #Contents#
 
 Expression language, syntax and semantics
-Syntax
+#Syntax#
 Grammar
 Expressions
 Context-Sensitive
@@ -22,7 +22,7 @@ Options
 Parametric Expressions
 Whitespace
 Comments
-Available Expression Options
+#Available Expression Options#
 Display Context
 Format
 Strings
@@ -31,7 +31,7 @@ Numbers
 i18n
 Array Join
 URI Manipulation
-Block Statements
+#Block Statements#
 Syntax
 Identifiers
 Available Block Statements
@@ -52,8 +52,11 @@ Examples
 Unwrap
 Set
 Block Statements Priority
-Special HTML tags
-<sly>
+#Special HTML tags#
+<small>
+<embed>
+<sty>
+<{{}}>
 #Use-API
 python Use-API
 python flask  Use-API
