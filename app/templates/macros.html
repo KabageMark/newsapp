@@ -1,7 +1,7 @@
 {% macro displaySources(sources_list)%}
     {% for source in sources_list %}
-    <ul>
-        <a href=/sources/articles/"{{source.id}}">{{source.name}}</a>
+    <ul class="container-fluid">
+        <a  class="btn" href=/sources/articles/"{{source.id}}">{{source.name}}</a>
         {{source.description}}
         
     </ul>
@@ -9,19 +9,28 @@
 {% endmacro %}
 
 {% macro displayArticles(articles_list)%}
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
 <center><h1>Top Headlines</h1></center>
     {% for article in articles_list %}
-    
+
+
     <h2>{{article.author}}</h2>
     <br>
-    <a href=/sources/articles/fullarticle/"{{article.description}}">click to read full article</a>
-    <div class="container">
-    <img src="{{article.urlToImage}}">
-    </div>
-    <small><strong>publishedat</strong></span>{{article.publishedAt}}</small> <small><strong>published by</strong></span>{{article.author}}</small>
     
+    <a href=/sources/articles/fullarticle"{{article.urlToImage}}">click to read full article</a>
+    
+    <br>
+    <img src="{{article.description}}">
+    <br>
+    <small><strong>publishedat</strong></small>{{article.publishedAt}}</small> <small><strong>published by</strong>{{article.author}}</small>
+   
 
     {% endfor %}
+</div>
+</div>
+</div> 
 {% endmacro %}
 
 
